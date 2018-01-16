@@ -1,8 +1,10 @@
 'use strict';
 
-const number = process.argv[2] || 0;
-let result = 1;
-for (let i = 1; i <= number; i++){
-    result = result * i;
+function factorial(n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
 }
-console.log(result);
+
+const number = process.argv[2] || 0;
+let fact = factorial(number);
+console.log(fact);
